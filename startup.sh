@@ -5,8 +5,9 @@ sudo systemctl enable httpd
 sudo systemctl start httpd 
 
 sudo yum remove -y php
+sudo amazon-linux-extras enable php7.4
 sudo yum clean metadata
-sudo yum install -y php php-{pear,cgi,common,curl,mbstring,gd,mysqlnd,gettext,bcmath,json,xml,fpm,intl,zip}
+sudo yum install -y php php-{pear,cgi,common,curl,mbstring,gd,mysqlnd,gettext,bcmath,json,xml,fpm,intl,zip,cli,pdo}
 
 sudo yum install -y ruby
 sudo yum install -y wget
