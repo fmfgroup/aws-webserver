@@ -1,12 +1,12 @@
 #!/bin/bash -xe
 
-sudo yum install -y httpd httpd-tools mod_ssl 
+sudo yum install -y httpd httpd-tools mod_ssl mod_php
 sudo systemctl enable httpd 
 sudo systemctl start httpd 
-sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-sudo yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-sudo yum-config-manager --enable remi-php80
-sudo yum install -y php80
+
+sudo yum remove -y php
+sudo yum clean metadata
+sudo yum install -y php php-{pear,cgi,common,curl,mbstring,gd,mysqlnd,gettext,bcmath,json,xml,fpm,intl,zip}
 
 sudo yum install -y ruby
 sudo yum install -y wget
