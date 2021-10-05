@@ -25,6 +25,9 @@ sudo mkdir /etc/httpd/sites-enabled
 #sudo mv /home/aws-webserver/httpd.conf /etc/httpd/conf/httpd.conf
 echo 'IncludeOptional /etc/httpd/sites-enabled/*.conf' | sudo tee -a /etc/httpd/conf/httpd.conf
 
+sudo touch /var/www/html/index.php
+echo '<?php phpinfo(); ?>' | sudo tee -a /var/www/html/index.php
+
 sudo service httpd restart
 
 
