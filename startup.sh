@@ -1,5 +1,6 @@
 #!/bin/bash -xe
 
+sudo timedatectl set-timezone Europe/Rome
 sudo yum install -y httpd httpd-tools mod_ssl mod_php
 sudo systemctl enable httpd 
 sudo systemctl start httpd 
