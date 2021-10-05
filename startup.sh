@@ -23,6 +23,7 @@ sudo mkdir /etc/httpd/sites-enabled
 
 #sudo rm -f /etc/httpd/conf/httpd.conf
 #sudo mv /home/aws-webserver/httpd.conf /etc/httpd/conf/httpd.conf
+echo 'IncludeOptional /etc/httpd/sites-enabled/*.conf' | sudo tee -a /etc/httpd/conf/httpd.conf
 
 sudo service httpd restart
 
