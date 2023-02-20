@@ -36,6 +36,12 @@ sudo wget -O /usr/bin/pdf tk https://github.com/lob/lambda-pdftk-example/raw/mas
 sudo chmod a+x /usr/bin/pdftk
 
 
+sudo yum update -y
+sudo yum install -y php php-pgsql
+
+sudo amazon-linux-extras enable postgresql14
+sudo yum clean metadata
+sudo yum install -y postgresql
 
 
 
