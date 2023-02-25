@@ -31,8 +31,8 @@ echo '<?php phpinfo(); ?>' | sudo tee -a /var/www/html/index.php
 
 sudo service httpd restart
 
-sudo wget -O /usr/lib64/libgcj.so.10 https://github.com/lob/lambda-pdftk-example/raw/master/bin/libgcj.so .10
-sudo wget -O /usr/bin/pdf tk https://github.com/lob/lambda-pdftk-example/raw/master/bin/pdftk
+sudo wget -O /usr/lib64/libgcj.so.10 https://github.com/lob/lambda-pdftk-example/raw/master/bin/libgcj.so.10
+sudo wget -O /usr/bin/pdftk https://github.com/lob/lambda-pdftk-example/raw/master/bin/pdftk
 sudo chmod a+x /usr/bin/pdftk
 
 
